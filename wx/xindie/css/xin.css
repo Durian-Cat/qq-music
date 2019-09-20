@@ -1,0 +1,170 @@
+
+.main, .section_inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+div {
+    display: block;
+}
+body, button, input, select, textarea, th {
+    color: #000;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+    font-family: Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif/9;
+}
+.h_nav{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.h_nav ul {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    margin-left: 215px;
+}
+.h_nav li {
+    flex: 1;
+}           
+.h_nav a{
+    color: #000;
+    font-size: 16px;
+}
+.h_nav a:hover{
+    color: #31c27c;
+}
+.h_nav .num {
+     color: #31c27c;
+}
+
+.mod_tag {
+    position: relative;
+    margin: 52px 0 0;
+}
+
+.tag__list {
+    position: relative;
+    height: auto;
+    zoom: 1;
+    clear: both;
+    overflow: hidden;
+    line-height: 26px;
+    padding-left: 65px;
+}
+.green{
+    color: #31c27c;
+}
+.tag__item {
+    float: left;
+    padding: 0 8px;
+    margin: 0 24px 15px 0;
+}
+.tag__list a:hover {
+    background-color: #31c27c;
+    color: #fff;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* 广告部分 */
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input,  li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+.playlist__list li{
+	float: left;
+    padding-right: 16px;
+    position: relative;
+}
+.he {
+    width: 224px;
+    /* height: 224px; */
+    overflow: hidden;
+}
+.playlist__list img{
+    width: 224px;
+    /* height: 224px; */
+    padding-bottom: 10px;
+    transition:  all 1s linear;
+}
+.playlist__list img:hover{
+    transform: scale(1.1);
+}
+.playlist__list h4{
+    padding-bottom: 5px;
+    color: #000;
+}
+.playlist__list h4:hover{
+    color: #31c27c;
+}
+.playlist__list p{
+    padding-bottom: 5px;
+    color: #99a6c4;
+}
+.playlist__list p:hover{
+    color: #31c27c;
+}
+.playlist__list i {
+    display: inline-block;
+    padding-bottom: 40px;
+    color: #99a6c4;
+}
+.playlist__list em{
+    display: none;
+    width: 70px;
+    height: 70px; 
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    background: url(../images/bf.png);
+}
+.playlist__list em:hover{
+    display: block;
+    width: 70px;
+    height: 70px;
+   
+    /* transform: scale(1.1); */
+}
+
+/* 下方角标 */
+.mod_page_nav{
+    text-align: center;
+    margin: 0 auto;
+}
+.mod_page_nav ul {
+    width: 210px;
+    margin: 0 auto;
+}
+.mod_page_nav li {
+    float: left;
+    width: 70px;
+    height: 75px;
+    line-height: 75px;
+}
+.mod_page_nav ul li:nth-child(1):hover{
+    background-color: #31c27c;
+}
+.mod_page_nav ul li:nth-child(2):hover{
+    background-color: #31c27c;
+}
+.mod_page_nav a{
+    text-align: center;
+}
+
+/* 港台部分 */
+#album_list2{
+    display: none;
+}
+.footer{
+    width: 100%;
+}
+

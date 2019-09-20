@@ -1,0 +1,17 @@
+.qzfl_log{z-index:65535;font-size:12px;position:fixed;_position:absolute;left:30px;top:30px;border:2px solid #fff;padding:5px;background:#000;color:#fff;width:250px;opacity:0.80;filter:Alpha(opacity:80);font-family:Consolas,'LucidaConsole',Monaco,monospace;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.qzfl_log_head{margin:0;margin-bottom:5px;font-size:14px;}
+.qzfl_log_head button{float:right;border:0px solid #666;background:#000;color:#fff;width:16px;height:16px;font-weight:bold;margin-top:-2px;_margin-top:0;font-size:11px;cursor:pointer;}
+.qzfl_log ul{margin:0;padding:0;height:200px;overflow-y:auto;list-style:none;}
+.qzfl_log ul li{padding:4px;border-bottom:1px solid #666;line-height:150%;}
+.qzfl_log .log_icon{width:13px;height:13px;background:#fff;overflow:hidden;margin-right:5px;float:left;margin-top:2px;font-weight:bold;text-align:center;font-size:12px;color:#8B8B8B;line-height:135%;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.qzfl_log_error{}
+.qzfl_log_error .log_icon{background:#FF0000;color:#660000;}
+.qzfl_log_warning{}
+.qzfl_log_warning .log_icon{background:#FFFF00;color:#8C7E00;}
+.qzfl_log_debug{}
+.qzfl_log_debug .log_icon{background:#33CC00;color:#006600;}
+.qzfl_log_info{}
+.qzfl_log_info .log_icon{background:#0066FF;color:#000066}
+.qzfl_log_profile{}
+.log_console{font-weight:bold;font-size:14px;margin-top:6px;border-top:1px solid #666;width:100%;color:#CCFF00;padding-top:4px;}
+.log_console input{border:0px solid #666;background:#000;color:#CCFF00;font-family:Consolas,'LucidaConsole',Monaco,monospace;font-size:12px;width:230px;margin-left:4px;}

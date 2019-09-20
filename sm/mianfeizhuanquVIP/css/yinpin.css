@@ -1,0 +1,21 @@
+.yinpins{
+    width: 100%;
+    height: 481px;
+    margin-top: 30px;
+    background-color: pink;
+    overflow: hidden;
+    /* background: url('../images/video_1.jpg') no-repeat; */
+    /* background: url('../images/bg.jpg') no-repeat; */
+    /* background: url('../images/video_7.jpg') no-repeat; */
+    /* background: url('../images/video_8.jpg') no-repeat; */
+    /* background: url('../images/video_5.jpg') no-repeat; */
+    background: url('../images/video_9.jpg') no-repeat;
+    /* background-size: cover; */
+    background-size: 1529px 600px;
+    text-align: center;
+}
+.yinpin{
+    width: 700px;
+    height: 394px;
+    margin-top: 40px;
+}

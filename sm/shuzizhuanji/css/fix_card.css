@@ -1,0 +1,29 @@
+.fix_card {
+  width: 180px;
+  height: 140px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  position: fixed;
+  right: 70px;
+  top: 171px;
+  z-index: 12;
+}
+.fix_card img {
+  height: 30px;
+  margin-top: 15px;
+}
+.fix_card p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.fix_card a {
+  display: block;
+  width: 130px;
+  height: 28px;
+  line-height: 28px;
+  color: white;
+  border-radius: 14px;
+  background-color: #31c27c;
+  margin: 5px auto;
+}

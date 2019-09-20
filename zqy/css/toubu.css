@@ -1,0 +1,166 @@
+.h_top_nav {
+  max-width: 100%;
+  height: 90px;
+  background-color: #fff;
+}
+.h_top_nav .h-qqyinyue {
+  margin-right: 20px;
+  line-height: 90px;
+}
+.h_top_nav .h-yinyue li {
+  position: relative;
+  float: left;
+  padding: 0px 20px;
+  font-size: 18px;
+  line-height: 90px;
+}
+.h_top_nav .h-yinyue li a {
+  color: #000;
+}
+.h_top_nav .h-yinyue li a:hover {
+  color: #31c27c;
+}
+.h_top_nav .h-yinyue li .h_box3 {
+  position: absolute;
+  top: 18px;
+  right: 4px;
+  height: 14px;
+}
+.h_top_nav .h-yinyue .h-a {
+  color: #fff !important;
+}
+.h_top_nav .h-yinyue .h-bgc {
+  background-color: #31c27c;
+}
+.h_top_search {
+  position: absolute;
+  top: 0px;
+  right: 365px;
+}
+.h_top_search .h_search {
+  border: 1px solid #c9c9c9;
+  padding: 0 33px 0 11px;
+  height: 36px;
+  line-height: 36px;
+  margin-top: 26px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.h_top_search .h_search .iconfont {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 20px;
+}
+.h_top_search .h_search .iconfont a:hover {
+  color: #31c27c;
+}
+.h_top_login {
+  position: absolute;
+  top: 0px;
+  right: 230px;
+  height: 90px;
+  line-height: 90px;
+}
+.h_top_login .h_login {
+  position: relative;
+  right: 35px;
+  margin-right: 15px;
+  font-size: 16px;
+  color: #000;
+}
+.h_top_login .h_login:hover {
+  color: #31c27c;
+}
+.h_top_login .h_dredge {
+  position: absolute;
+  top: 25px;
+  right: -45px;
+  display: block;
+  width: 110px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #31c27c;
+  background-color: #31c27c;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 3px;
+}
+.h_top_login .h_dredge:hover {
+  background-color: #2caf6f;
+}
+.h_top_login .h_pay {
+  position: relative;
+  top: -66px;
+  right: -140px;
+  display: block;
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+  text-align: center;
+  color: #000;
+  font-size: 13px;
+}
+.h_top_login .h_pay:hover {
+  background-color: #ededed;
+}
+.h_box {
+  display: none;
+  position: absolute;
+  top: 68px;
+  left: 20px;
+  right: auto;
+  width: 160px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+}
+.h_box .h_popup {
+  margin: 9px 0px 18px;
+}
+.h_box .h_popup .jlt1 {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite_privilege.png-max_age.png) 0px -1px;
+}
+.h_box .h_popup .jlt2 {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite_privilege.png-max_age.png) 0px -29px;
+}
+.h_box .h_popup .jlt3 {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite_privilege.png-max_age.png) 0px -59px;
+}
+.h_box .h_popup p {
+  margin-left: 16px;
+  margin-right: 0px;
+  padding: 5px 0px;
+  color: #000;
+  font-size: 12px;
+  line-height: 17px;
+}
+.h_box .h_popup p i {
+  margin-bottom: -3px;
+}
+.h_box .h_popup .xiazhai {
+  display: block;
+  width: 135px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #31c27c;
+  color: #fff !important;
+  margin: 6px auto;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #24ccaa, #31c27c);
+}

@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>票务</title>
+    <!-- css样式 -->
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="icon" href="images/fonticon.ico">
+    
+    <!-- 刘梅: 头部+导航，尾部，固定卡片 -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/fix_card.css">
+    <!-- 轮播图 -->
+    <!-- <link rel="stylesheet" href="./css/lunbo1.css"> -->
+    <style>
+        .solid {
+            width: 1200px;
+            height: 360px;
+            margin: 30px auto 80px;
+        }
+
+        .solid ul {
+            height: 100%;
+        }
+
+        .solid ul li {
+            position: relative;
+            float: left;
+            box-sizing: border-box;
+            transform-style: preserve-3d;
+            transform: translateZ(-180px);
+        }
+
+        .solid ul li div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .solid ul li div:nth-child(1) {
+            top: -360px;
+            background: url('./images/1.jpg');
+            transform-origin: bottom;
+            transform: translateZ(180px) rotateX(90deg);
+        }
+
+        .solid ul li div:nth-child(2) {
+            top: 360px;
+            background: url('./images/2.jpg');
+            transform-origin: top;
+            transform: translateZ(180px) rotateX(-90deg);
+        }
+
+        .solid ul li div:nth-child(3) {
+            background: url('./images/5.jpg');
+            transform: translateZ(180px);
+        }
+
+        .solid ul li div:nth-child(4) {
+            background: url('./images/4.jpg');
+            transform: translateZ(-180px) rotateX(180deg);
+        }
+
+        .solid ol {
+            margin-top: 1px;
+            position: absolute;
+            left: 50%;
+            width: 1200px;
+            height: 2px;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .solid ol li {
+            width: 300px;
+            height: 8px;
+            background: black;
+            box-shadow: 0 2px 5px white;
+            color: white;
+            text-align: center;
+            /*斜体 12px大小/20px行高*/
+            font: italic 12px/20px 'Microsoft Yahei';
+            cursor: pointer;
+            border-right: 2px solid rgba(255, 255, 255, 0.616);
+            box-sizing: border-box;
+        }
+
+        .solid ol li.on {
+            background: #b6b5b5;
+        }
+    </style>
+    <!-- 内容主体 -->
+    <link rel="stylesheet" href="./css/laozhu.css">
+
+    <!-- 引入jQuery文件 -->
+    <script src="./js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="w">
+            <!-- 导航栏logo -->
+            <a href="#"><img src="images/logo.png" alt=""></a>
+            <!-- 导航栏列表 -->
+            <ul class="header_list_nav">
+                <li class="header_nav s_one"><a href="">音乐馆</a></li>
+                <li class="header_nav"><a href="">我的音乐</a></li>
+                <li class="header_nav nav_hover">
+                    <a href="">客户端</a>
+                    <span class="fix_nav_sp"></span>
+                    <!-- 隐藏的列表项 -->
+                    <ul class="fix_nav_list">
+                        <li class="fix_nav_img"><img src="images/hide_1.png" alt="">HQ高品质 全员开启</li>
+                        <li class="fix_nav_img"><img src="images/hide_2.png" alt="">独家音效 全面升级</li>
+                        <li class="fix_nav_img"><img src="images/hide_3.png" alt="">轻盈视觉 动态皮肤</li>
+                        <li class="fix_nav_btn">下载体验</li>
+                    </ul>
+                </li>
+                <li class="header_nav"><a href="">音乐号</a></li>
+                <li class="header_nav"><a href="">VIP</a></li>
+            </ul>
+            <!-- 导航搜索框 -->
+            <div class="search_box">
+                <input type="text" placeholder="搜索音乐、MV、歌曲、用户" id="search_inp">
+                <a href="#" class="search_icon"></a>
+                <!-- 下拉列表 -->
+                <ul>
+                    <li>
+                        <font class="search_num">1</font><span class="search_m_name">画 </span>
+                        <font class="listener_num">103.4万</font>
+                    </li>
+                    <li>
+                        <font class="search_num">2</font><span class="search_m_name">后继者</span>
+                        <font class="listener_num">103.4万</font>
+                    </li>
+                    <li>
+                        <font class="search_num">3</font><span class="search_m_name">木偶人</span>
+                        <font class="listener_num">103.4万</font>
+                    </li>
+                    <li>
+                        <font class="search_num">4</font><span class="search_m_name">慢半拍</span>
+                        <font class="listener_num">103.4万</font>
+                    </li>
+                    <li>
+                        <font class="search_num">5</font><span class="search_m_name">像我这样的人</span>
+                        <font class="listener_num">103.4万</font>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- 登录 -->
+            <a href="#" class="header_login">登录</a>
+            <!-- 开通绿钻 -->
+            <a href="#" class="header_open" style="background-color: #2CAF6F">开通绿钻豪华版</a>
+            <a href="#" class="header_open font1">开通付费包</a>
+        </div>
+    </div>
+
+    <!-- 导航 -->
+    <div class="h_nav">
+        <div class="w">
+            <ul>
+                <li><a href="../../dqp/index.html">首页</a></li>
+                <li><a href="javascript:;">歌手</a></li>
+                <li><a href="javascript:;">新碟</a></li>
+                <li><a href="javascript:;">排行榜</a></li>
+                <li><a href="javascript:;">分类歌单</a></li>
+                <li><a href="javascript:;">电台</a></li>
+                <li><a href="javascript:;">MV</a></li>
+                <li><a href="../../sm/数字专辑/数字专辑.html">数字专辑</a></li>
+                <li><a href="javascript:;" class="num">票务</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 固定卡片 -->
+    <div class="fix_card">
+        <img src="images/logo.png" alt="">
+        <p>千万高品质曲库尽享</p>
+        <div class="card_download">
+            <a href="javascript:;">
+                客户端下载</a>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <!-- 轮播图 -->
+    <!-- <div class="zuo"></div>
+    <div class="zqy">
+        <div class="zhj_lunbo_box" style="margin-top:25px">
+            <img src="./images/6.jpg" alt="1" />
+            <img src="./images/3.jpg" alt="2" />
+            <img src="./images/2.jpg" alt="3" />
+            <img src="./images/1.jpg" alt="4" />
+            <img src="./images/4.jpg" alt="5" />
+        </div>
+    </div> -->
+    <div class="solid">
+        <ul class="oUl"></ul>
+        <ol>
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+
+    <!-- 中间nav -->
+    <div class="user_ctrl_box">
+        <!-- 搜索票务盒子 -->
+        <div class="user_ctrl">
+            <div class="w section_inner">
+                <!-- 地点选择按钮 -->
+                <div class="user_ctrl__btn">
+                    <a href="javascript:;" class="user_ctrl__btn_box ">上海
+                        <i class="user_ctrl__btn_arrow  sprite"></i>
+                    </a>
+                    <div class="popup_data_detail popup_detail_city "
+                        style="position: absolute; top: 62px; left: 0px; right: auto;">
+                        <div class="popup_data_detail__cont">
+                            <div class="popup_detail_city__grid">
+
+                                <div class="popup_detail_city__item">
+                                    <label class="popup_detail_city__label">当前城市</label>
+                                    <ul class="city_list">
+                                        <li class="city_list__item">
+                                            <a href="javascript:;"
+                                                class="city_list__box js_choose_city js_current_city">天津</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+
+                                <div class="popup_detail_city__item">
+                                    <label class="popup_detail_city__label">热门城市</label>
+                                    <ul class="city_list">
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">全国</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">北京</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">上海</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">广州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">深圳</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">成都</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">武汉</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="popup_detail_city__grid">
+                                <h3 class="popup_detail_city__tit">按字母查找</h3>
+                                <div class="popup_detail_city__item">
+                                    <ul class="letter_list">
+
+                                        <li class="letter_list__item js_choose_city_letter letter_list__item--current">
+                                            <a href="javascript:;" class="letter_list__box ">A</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">B</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">C</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">D</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">E</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">F</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">G</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">H</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">J</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">K</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">L</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">M</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">N</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">Q</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">S</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">T</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">W</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">X</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">Y</a>
+                                        </li>
+
+                                        <li class="letter_list__item js_choose_city_letter">
+                                            <a href="javascript:;" class="letter_list__box ">Z</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="popup_detail_city__item js_letter_list">
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">A</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">安庆</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">安康</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">澳门</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">B</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">北京</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">保定</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">包头</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">本溪</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">白山</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">蚌埠</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">滨州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">宝鸡</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">C</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city"">沧州</a>
+                                    </li>
+
+                                    <li class=" city_list__item ">
+                                        <a href=" javascript:;" class="city_list__box js_choose_city">长治</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">长春</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">常州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">滁州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">长沙</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">郴州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">重庆</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">成都</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">D</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">大同</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">大连</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">东莞</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">大理</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">E</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">鄂尔多斯</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">F</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">福州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">佛山</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">G</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">广州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">桂林</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">贵阳</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">固原</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">H</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">衡水</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">邯郸</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">呼和浩特</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">哈尔滨</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">杭州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">湖州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">合肥</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">黄山</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">淮南</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">淮北</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">黄冈</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">衡阳</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">惠州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">海口</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">J</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">晋中</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">锦州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">吉林</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">嘉兴</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">金华</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">景德镇</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">九江</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">济南</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">济宁</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">荆州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">江门</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">嘉峪关</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">K</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">昆明</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">L</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">廊坊</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">临汾</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">辽源</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">临沂</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">聊城</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">洛阳</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">柳州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">乐山</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">丽江</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">拉萨</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">兰州</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">M</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">马鞍山</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">绵阳</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">N</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">南京</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">南通</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">宁波</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">南昌</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">南宁</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">南充</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">Q</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">全国</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">秦皇岛</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">泉州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">青岛</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">S</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">石家庄</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">沈阳</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">上海</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">宿迁</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">苏州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">绍兴</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">十堰</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city" ">深圳</a>
+                                    </li>
+
+                                    <li class=" city_list__item ">
+                                        <a href=" javascript:;" class="city_list__box js_choose_city">汕头</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">三亚</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">T</li>
+
+                                        <li class="city_list__item letter_list__item--current">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">天津</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">唐山</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">太原</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">铁岭</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">泰州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">台州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">铜陵</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">泰安</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">W</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">无锡</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">温州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">芜湖</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">威海</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">潍坊</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">武汉</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">乌鲁木齐</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">X</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">忻州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">徐州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">宣城</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">厦门</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">新乡</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">孝感</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">西安</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">咸阳</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">西宁</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">香港</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">Y</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">伊春</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">扬州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">盐城</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">烟台</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">宜昌</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">玉溪</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">延安</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">银川</a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul class="city_list js_letter_item">
+                                        <li class="city_list__item">Z</li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">镇江</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">舟山</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">淄博</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">郑州</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">株洲</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">张家界</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">肇庆</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">中山</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">珠海</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">张掖</a>
+                                        </li>
+
+                                        <li class="city_list__item ">
+                                            <a href="javascript:;" class="city_list__box js_choose_city">中卫</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <i class="popup_data_detail__arrow"></i>
+                    </div>
+                </div>
+                <!-- 检索框 -->
+                <div class="user_ctrl__search">
+                    <div class="mod_search_input">
+                        <input class="search_input__input " type="text" placeholder="搜索票务">
+                        <button class="search_input__btn">
+                            <i class="icon_search_i sprite"></i>
+                        </button>
+                        <ul>
+                            <li>
+                                <font class="search_num">1</font><span class="search_m_name">潘玮柏创使者巡回演唱会2019-北京站</span>
+                                <font class="listener_num">￥380 起</font>
+                            </li>
+                            <li>
+                                <font class="search_num">2</font><span class="search_m_name">2019共享商圈演唱会一福州站</span>
+                                <font class="listener_num">￥380 起</font>
+                            </li>
+                            <li>
+                                <font class="search_num">3</font><span class="search_m_name">洛在民谣第一百零一期</span>
+                                <font class="listener_num">￥40 起</font>
+                            </li>
+                            <li>
+                                <font class="search_num">4</font><span class="search_m_name">德沃夏克与博泰西尼作品音乐会</span>
+                                <font class="listener_num">￥60 起</font>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 右侧我的订单 -->
+                <a href="javascript:;" class="user_ctrl__link">我的订单
+                    <i class="user_ctrl__link_arrow sprite"></i>
+                </a>
+            </div>
+        </div>
+        <!-- 票务nav -->
+        <div class="sort_tab">
+            <div class="w section_inner">
+                <ul class="sort_tab_list">
+
+                    <li class="sort_tab_list__item">
+                        <a href="javascript:;" class="sort_tab_list__box sort_tab_list__box--current ">
+                            <i class="sort_tab_list__icon sort_tab_list__icon--all"></i>
+                            <p class="sort_tab_list__name">全部</p>
+                        </a>
+                    </li>
+
+                    <li class="sort_tab_list__item">
+                        <a href="javascript:;" class="sort_tab_list__box ">
+                            <i class="sort_tab_list__icon sort_tab_list__icon--show"></i>
+                            <p class="sort_tab_list__name">演唱会</p>
+                        </a>
+                    </li>
+
+                    <li class="sort_tab_list__item">
+                        <a href="javascript:;" class="sort_tab_list__box ">
+                            <i class="sort_tab_list__icon sort_tab_list__icon--livehouse"></i>
+                            <p class="sort_tab_list__name">LiveHouse</p>
+                        </a>
+                    </li>
+
+                    <li class="sort_tab_list__item">
+                        <a href="javascript:;" class="sort_tab_list__box">
+                            <i class="sort_tab_list__icon sort_tab_list__icon--concert"></i>
+                            <p class="sort_tab_list__name">音乐会</p>
+                        </a>
+                    </li>
+
+                    <li class="sort_tab_list__item">
+                        <a href="javascript:;" class="sort_tab_list__box ">
+                            <i class="sort_tab_list__icon sort_tab_list__icon--dance"></i>
+                            <p class="sort_tab_list__name">舞蹈芭蕾</p>
+                        </a>
+                    </li>
+
+                    <li class="sort_tab_list__item">
+                        <a href="javascript:;" class="sort_tab_list__box">
+                            <i class="sort_tab_list__icon sort_tab_list__icon--drama"></i>
+                            <p class="sort_tab_list__name">话剧歌剧</p>
+                        </a>
+                    </li>
+
+                    <li class="sort_tab_list__item">
+                        <a href="javascript:;" class="sort_tab_list__box ">
+                            <i class="sort_tab_list__icon sort_tab_list__icon--other"></i>
+                            <p class="sort_tab_list__name">其他演出</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 主体内容 -->
+    <div class="js_main_container">
+        <!-- 热门推荐 -->
+        <div class="mod_index mod_bg">
+
+            <div class="w section_inner">
+                <div class="index__hd">
+                    <h2 class="index__tit">热门推荐</h2>
+
+                </div>
+
+                <div class="mod_ticket_grid">
+
+                    <a href="javascript:;" class="ticket_grid__side">
+                        <img src="./images/T017M000000APAVn2VaDVx.jpg" class="ticket_grid__side_img" alt="">
+                        <div class="ticket_grid__side_info">
+                            <h3 class="ticket_grid__side_tit">潘玮柏创使者 Coming home 巡回演唱会2019-北京站</h3>
+
+                            <p class="ticket_grid__side_price"><em>¥ 380</em> 起<span class="ticket_grid__tag"><i
+                                        class="icon_lz sprite_ticket"></i>立减</span></p>
+                        </div>
+                    </a>
+
+
+                    <div class="ticket_grid__cont">
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000000ujdzo2of26h.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">MC HotDog热狗2019“废欲清” 全国巡演-深圳站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.08</p>
+                                <p class="ticket_grid__txt">嘿吼小镇</p>
+                                <p class="ticket_grid__price"><em>¥ 380</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M0000029uD262H8vI4.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">简弘亦"亦X不染"演唱会北京站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.27</p>
+                                <p class="ticket_grid__txt">北京展览馆剧场</p>
+                                <p class="ticket_grid__price"><em>¥ 380</em> 起</p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000002ewZLQ3UaBe7.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">2019武汉 VAC 电音节 一起来蹦迪吧！</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.11.02</p>
+                                <p class="ticket_grid__txt">武汉园博园·广场</p>
+                                <p class="ticket_grid__price"><em>¥ 880</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000003yulei3D8IkP.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">李荣浩「年少有为」巡回演唱会-长沙站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.11.02</p>
+                                <p class="ticket_grid__txt">湖南国际会展中心</p>
+                                <p class="ticket_grid__price"><em>¥ 380</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 演唱会 -->
+        <div class="mod_index mod_bg">
+
+            <div class="w section_inner">
+                <div class="index__hd">
+                    <h2 class="index__tit">演唱会</h2>
+
+                </div>
+
+                <div class="mod_ticket_grid">
+
+                    <a href="javascript:;" class="ticket_grid__side">
+                        <img src="./images/T017M0000039b9RB3ImZQU.jpg" class="ticket_grid__side_img" alt="">
+                        <div class="ticket_grid__side_info">
+                            <h3 class="ticket_grid__side_tit">2019共享商圈演唱会一福州站</h3>
+
+                            <p class="ticket_grid__side_price"><em>¥ 380</em> 起<span class="ticket_grid__tag"><i
+                                        class="icon_lz sprite_ticket"></i>立减</span></p>
+                        </div>
+                    </a>
+
+
+                    <div class="ticket_grid__cont">
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000001nc75w3nbvPK.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">黄雨篱 90＇s boy 2019巡演 武汉站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.05</p>
+                                <p class="ticket_grid__txt">L7 livehouse</p>
+                                <p class="ticket_grid__price"><em>¥ 80</em> 起
+                                    <!-- <span class="ticket_grid__tag"><i class="icon_lz sprite_ticket"></i>立减</span> -->
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000001cIxS111zCl4.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">维也纳爵士三重奏PRIM2019巡演-宁波站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.05</p>
+                                <p class="ticket_grid__txt">灯塔音乐现场</p>
+                                <p class="ticket_grid__price"><em>¥ 60</em> 起
+                                    <span class="ticket_grid__tag"><i class="icon_lz sprite_ticket"></i>立减</span>
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000002S484Y1eRTC3.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">Favours! （偏袒乐队）2019新专辑全国巡演——武汉站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.05</p>
+                                <p class="ticket_grid__txt">VOX LIVEHOUSE</p>
+                                <p class="ticket_grid__price"><em>¥ 80</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000000tZLGy3lPsy8.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">德系暗潮乐队Lebanon Hanover巡演 杭州站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.05</p>
+                                <p class="ticket_grid__txt">MAO Livehouse</p>
+                                <p class="ticket_grid__price"><em>¥ 150</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- LiveHouse -->
+        <div class="mod_index mod_bg">
+
+            <div class="w section_inner">
+                <div class="index__hd">
+                    <h2 class="index__tit">LiveHouse</h2>
+
+                </div>
+
+                <div class="mod_ticket_grid">
+
+                    <a href="javascript:;" class="ticket_grid__side">
+                        <img src="./images/T017M000001TFqpW3DJ2C3.jpg" class="ticket_grid__side_img" alt="">
+                        <div class="ticket_grid__side_info">
+                            <h3 class="ticket_grid__side_tit">洛在民谣第一百零一期：保臣原创民谣音乐分享会现场预售[洛阳站]</h3>
+
+                            <p class="ticket_grid__side_price"><em>¥ 40</em> 起<span class="ticket_grid__tag">
+                                    <i class="icon_lz sprite_ticket"></i>立减</span></p>
+                        </div>
+                    </a>
+
+
+                    <div class="ticket_grid__cont">
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000003LFxIY3yMHYM.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">阿涛吉他2019巡演 廊坊站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.04</p>
+                                <p class="ticket_grid__txt">深核Livehouse</p>
+                                <p class="ticket_grid__price"><em>¥ 80</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000001KC1Pe03HTDR.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">TOP 100 DJ - NERVO @SPACE PLUS</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.04</p>
+                                <p class="ticket_grid__txt">上海SPACE PLUS</p>
+                                <p class="ticket_grid__price"><em>¥ 100</em> 起</p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000002WwfiZ3TZtPd.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">维也纳爵士三重奏PRIM2019巡演 长沙站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.04</p>
+                                <p class="ticket_grid__txt">Red Club红咖俱乐部</p>
+                                <p class="ticket_grid__price"><em>¥ 60</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000000B9j1K3HMxnq.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">2019旋律当道—瑞士摩登金属乐队DREAMSHADE 巡演 北京站</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.09.04</p>
+                                <p class="ticket_grid__txt">MAO Livehouse北京</p>
+                                <p class="ticket_grid__price"><em>¥ 180</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 音乐会 -->
+        <div class="mod_index mod_bg">
+
+            <div class="w section_inner">
+                <div class="index__hd">
+                    <h2 class="index__tit">音乐会</h2>
+
+                </div>
+
+                <div class="mod_ticket_grid">
+
+                    <a href="javascript:;" class="ticket_grid__side">
+                        <img src="./images/T017M000004OiaxU2ekwWz.jpg" class="ticket_grid__side_img" alt="">
+                        <div class="ticket_grid__side_info">
+                            <h3 class="ticket_grid__side_tit">【XSO2019乐季】—德沃夏克与博泰西尼作品音乐会</h3>
+
+                            <p class="ticket_grid__side_price"><em>¥ 60</em> 起<span class="ticket_grid__tag"><i
+                                        class="icon_lz sprite_ticket"></i>立减</span></p>
+                        </div>
+                    </a>
+
+                    <div class="ticket_grid__cont">
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000002q6bul3Fwnvu (1).jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">欢庆十一《菊次郎的夏天—久石让轻音乐之旅钢琴音乐会》</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.10.01</p>
+                                <p class="ticket_grid__txt">黄浦剧场</p>
+                                <p class="ticket_grid__price"><em>¥ 88</em> 起
+                                    <!-- <span class="ticket_grid__tag"><i class="icon_lz sprite_ticket"></i>立减</span> -->
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000000hl5qQ0H3ekG.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit"> "卡农Canon In D"永恒经典名曲精选音乐会-爱乐汇轻音乐团 现场呈现-深圳</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.04.30</p>
+                                <p class="ticket_grid__txt">少年宫</p>
+                                <p class="ticket_grid__price"><em>¥ 100</em> 起</p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M000000gNFQb3q0Kho.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">“一生所爱”唯美动听经典名曲精选音乐会成都站-爱乐汇轻音乐团 现场呈现-10月场</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.05.26</p>
+                                <p class="ticket_grid__txt">特仑苏音乐厅</p>
+                                <p class="ticket_grid__price"><em>¥ 80</em> 起
+                                    <!-- <span class="ticket_grid__tag"><i class="icon_lz sprite_ticket"></i>立减</span> -->
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="ticket_grid__item ">
+                            <a href="javascript:;" class="ticket_grid__media"><img
+                                    src="./images/T017M0000011URSa07G5wL.jpg" class="ticket_grid__media_img"></a>
+                            <a href="javascript:;" class="ticket_grid__bd">
+                                <h3 class="ticket_grid__tit">【现场取票】“钢琴诗人”Pianoboy高至豪 流行钢琴音乐会 -成都</h3>
+                                <p class="ticket_grid__date"></p>
+                                <p class="ticket_grid__txt">2019.04.20</p>
+                                <p class="ticket_grid__txt">特仑苏音乐厅</p>
+                                <p class="ticket_grid__price"><em>¥ 100</em> 起<span class="ticket_grid__tag"><i
+                                            class="icon_lz sprite_ticket"></i>立减</span></p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 尾部 -->
+    <div class="footer">
+
+        <div class="w">
+            <!-- 下载QQ音乐客户端 -->
+            <dl class="footer_pub">
+                <dt> 下载QQ音乐客户端</dt>
+                <dd class="pub_download"><span class="footer_icon dl1"></span> PC版</dd>
+                <dd class="pub_download"><span class="footer_icon dl2"></span> Mac版</dd>
+                <dd class="pub_download"><span class="footer_icon dl3"></span> Android版</dd>
+                <dd class="pub_download"><span class="footer_icon dl4"></span> iPhone版</dd>
+            </dl>
+            <!-- 特色产品 -->
+            <dl class=" footer_pub pub_list2">
+                <dt> 特色产品</dt>
+                <dd class="pub_download"><span class="footer_icon puc1"></span> 全民K歌</dd>
+                <dd class="pub_download"><span class="footer_icon puc2"></span> Super Sound</dd>
+                <dd class="pub_download"><span class="footer_icon puc3"></span> QPlay</dd>
+            </dl>
+            <dl class="footer_pub spec">
+                <dt> 合作链接</dt>
+                <dd>
+                    <ul class="pub_list_ul">
+                        <li class="pub_ul_li">CJ ENM</li>
+                        <li class="pub_ul_li">最新版QQ</li>
+                        <li class="pub_ul_li">QQ浏览器</li>
+                        <li class="pub_ul_li">企鹅FM</li>
+                    </ul>
+                </dd>
+                <dd>
+                    <ul class="pub_list_ul">
+                        <li class="pub_ul_li">腾讯视频</li>
+                        <li class="pub_ul_li">腾讯社交广告</li>
+                        <li class="pub_ul_li">腾讯微云</li>
+                        <li class="pub_ul_li">智能电视网</li>
+                    </ul>
+                </dd>
+                <dd>
+                    <ul class="pub_list_ul">
+                        <li class="pub_ul_li">手机QQ空间</li>
+                        <li class="pub_ul_li">电脑管家</li>
+                        <li class="pub_ul_li">腾讯云</li>
+                        <li class="pub_ul_li">当贝市场</li>
+                    </ul>
+                </dd>
+            </dl>
+
+            <!-- 结尾 版权信息-->
+            <div class="footer_copyright">
+
+                <p>
+                    <a href="javascript:;">关于腾讯</a> |
+                    <a href="javascript:;">About Tencent</a> |
+                    <a href="javascript:;">服务条款</a> |
+                    <a href="javascript:;">用户服务协议</a> |
+                    <a href="javascript:;">隐私政策</a> |
+                    <a href="javascript:;">权利声明</a> |
+                    <a href="javascript:;">广告服务</a> |
+                    <a href="javascript:;">腾讯招聘</a> |
+                    <a href="javascript:;">客服中心</a> |
+                    <a href="javascript:;">网站导航</a>
+                </p>
+
+                <p>
+                    Copyright © 1998 -
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                    2019 Tencent.
+                    <a href="javascript:;">All Rights Reserved.</a>
+                </p>
+                <p>
+                    腾讯公司
+                    <a href="javascript:;" class="aa">版权所有</a>
+                    <a href="javascript:;">腾讯网络文化经营许可证</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- js样式引用 -->
+    <script src="./js/lunbo_baiye.js"></script>
+    <script src="./js/header.js"></script>
+    <!-- <script src="./js/lunbo1.js"></script> -->
+    <script src="./js/footer.js"></script>
+    <script src="./js/laozhu.js"></script>
+
+</body>
+
+
+</html>

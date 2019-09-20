@@ -1,0 +1,919 @@
+//公共样式
+.pub_font_color {
+    background-image: linear-gradient(to bottom,
+            #eee,
+            rgba(255, 255, 255, 0.925),
+            rgba(255, 255, 255, 0.993),
+            rgba(255, 255, 255, 0.719),
+            #eee);
+}
+
+.active_nav_fcolor {
+    color: #31c27c;
+}
+
+#none {
+    margin-left: 75px;
+}
+
+#h1 {
+    color: #000;
+}
+
+#ff {
+    font-size: 22px;
+    color: #fff;
+}
+ul li {
+    float:left;
+}
+.left {
+    float:left;
+}
+.right {
+    float: right;
+}
+#h3 {
+    font-size:18px;
+    color:#000;
+}
+
+// 歌单推荐部分
+.songs_list {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .songs_content {
+        height: 380px;
+        position: relative;
+        width: 100%;
+
+        .songs_list_item {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            ul {
+                width: 5100px;
+                height: 310px;
+
+                li {
+                    width: 1200px;
+
+                    ul {
+                        width: 100%;
+                        height: 310px;
+
+                        li {
+                            width: 224px;
+                            height: 100%;
+                            margin-right: 20px;
+                            position: relative;
+
+                            .kuang {
+                                width: 224px;
+                                height: 224px;
+                                overflow: hidden;
+                                position: relative;
+
+                                img {
+                                    height: 224px;
+                                    margin-bottom: 15px;
+                                    transition: all .5s linear;
+                                }
+
+                                #mengban {
+                                    width: 224px;
+                                    height: 224px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background: rgb(0, 0, 0);
+                                    opacity: 0;
+
+                                    #ies {
+                                        position: absolute;
+                                        top: 38%;
+                                        left: 50%;
+                                        transform: translate(-50%, -40%);
+                                        width: 50px;
+                                        height: 50px;
+                                        background: rgb(255, 255, 255);
+                                        font-size: 25px;
+                                        text-align: center;
+                                        line-height: 50px;
+                                        border-radius: 50%;
+                                        opacity: 0;
+                                    }
+                                }
+
+                            }
+
+                            a {
+                                font-size: 14px;
+                            }
+
+                            p {
+                                color: #666;
+                                font-size: 14px;
+                                line-height: 25px;
+                            }
+                        }
+
+                        li:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .songs_list_item:first-child ul {
+            position: relative;
+            width: 3750px;
+            height: 310px;
+
+            .clone {
+                width: 1200px;
+                height: 380px;
+            }
+        }
+    }
+
+
+
+    .btns {
+        width: 100%;
+        height: 108px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -40%);
+
+        a {
+            display: inline-block;
+            width: 75px;
+            height: 100%;
+            background: rgba(204, 204, 204, .5);
+            transition: all .3s linear;
+            text-align: center;
+            line-height: 108px;
+            font-size: 30px;
+
+        }
+
+        a:first-child {
+            transform: translateX(-100%);
+        }
+
+        a:last-child {
+            width: 74px;
+            transform: translateX(100%);
+        }
+    }
+
+}
+
+.songs_list_title {
+    text-align: center;
+    padding: 50px 24px;
+    box-sizing: border-box;
+    letter-spacing: 10px;
+}
+
+.songs_list_nav {
+    ul {
+        width: 600px;
+        height: 60px;
+        display: flex;
+        margin: auto;
+
+        li {
+            flex: 1;
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.songs_list:hover .btns a {
+    transform: translateX(0px);
+}
+
+.dotteds {
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+
+    a {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 255, .5);
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+}
+
+//新歌首发部分
+.new_songs {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .new_songs_nav {
+        ul {
+            width: 600px;
+            height: 60px;
+            display: flex;
+            margin: auto;
+
+            li {
+                flex: 1;
+
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .new_songs_center {
+
+
+        .new_songs_nav {
+            position: relative;
+        }
+
+        .new_songs_nav>a {
+            display: inline-block;
+            width: 150px;
+            height: 45px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 50px;
+            position: absolute;
+        }
+
+        .new_songs_main {
+            width: 100%;
+            margin-top: 30px;
+            overflow: hidden;
+
+            ul {
+                width: 6300px;
+                height: 380px;
+                position: relative;
+
+                li {
+                    width: 1200px;
+
+                    ul {
+                        width: 30%;
+                        float: left;
+                        margin-left: 30px;
+
+                        li {
+                            width: 100%;
+                            padding: 15px 0;
+                            box-sizing: border-box;
+
+                            img {
+                                height: 86px;
+                            }
+
+                            span {
+                                color: #666;
+                                display: inline-block;
+                                margin-top: 30px;
+                            }
+                        }
+
+                    }
+
+                    ul:first-child {
+                        margin-left: 0;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
+
+.btn {
+    width: 100%;
+    height: 108px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -40%);
+
+    a {
+        display: inline-block;
+        width: 75px;
+        height: 100%;
+        background: rgba(204, 204, 204, .5);
+        transition: all .3s linear;
+        text-align: center;
+        line-height: 108px;
+        font-size: 30px;
+    }
+
+    a:first-child {
+        transform: translateX(-100%);
+    }
+
+    a:last-child {
+        width: 74px;
+        transform: translateX(100%);
+    }
+}
+
+.new_songs:hover .btn>a {
+    transform: translateX(0);
+}
+
+.new_songs:hover .btn>a {
+    transform: translateX(0px);
+}
+
+.right_explans {
+    margin: 20px;
+    font-size: 15px;
+
+    p a {
+        color: #666;
+    }
+}
+
+
+//排行榜
+.listen {
+    width: 100%;
+    height: 630px;
+
+    .listen_center {
+        height: 100%;
+        display: flex;
+
+        .left {
+            flex: 1;
+
+            .top {
+                width: 540px;
+                padding: 30px 0;
+                box-sizing: border-box;
+                border-bottom: 1px dashed #ccc;
+                margin: auto;
+
+                h3 {
+                    display: inline-block;
+                    font-weight: 400;
+                }
+
+                .miuse {
+                    font-size: 14px;
+                    color: #999;
+                    display: inline-block;
+                    margin-left: 15px;
+                }
+
+                a {
+                    font-size: 14px;
+                    color: skyblue;
+                    float: right;
+                }
+            }
+
+            .bottom {
+                ol {
+                    li {
+                        margin-left: 10px;
+                        width: 500px;
+                        height: 50px;
+                        line-height: 50px;
+                        border-bottom: 1px solid #eee;
+                        position: relative;
+
+                        input {
+                            position: absolute;
+                            top: 45%;
+                            transform: translate(-50%);
+                        }
+
+                        .i1 {
+                            color: red;
+                            margin-left: 20px;
+
+                        }
+
+                        .color {
+                            color: #999;
+                        }
+
+                        .i2 {
+                            font-size: 8px;
+                            background: red;
+                            color: white;
+                            border-radius: 4px;
+                        }
+
+                        .bg {
+                            background: green;
+                        }
+
+                        span:last-child {
+                            color: #999;
+                        }
+
+                        #smallbtn {
+                            display: inline-block;
+                            width: 70px;
+                            height: 30px;
+                            position: absolute;
+                            top: 7px;
+                            right: 70px;
+
+                            a {
+                                color: #169af3;
+                            }
+
+                            a:nth-child(2) {
+                                margin-left: 5px;
+                            }
+
+                            a:last-child {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                    p {
+                        width: 374px;
+                        margin-top: 30px;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #666;
+                        position: relative;
+
+                        input {
+                            width: 100px;
+                            height: 30px;
+                            text-align: center;
+                            line-height: 30px;
+                            background: #169af3;
+                            border-radius: 3px;
+                            color: #fff;
+                            position: absolute;
+                            top: -5px;
+                            right: -13px;
+                            cursor: pointer;
+                        }
+
+                        input:hover {
+                            background: rgba(22, 154, 243, .6);
+                            ;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .right {
+            flex: 1;
+
+            .box1 {
+                width: 552px;
+                height: 300px;
+                position: relative;
+                top: 100px;
+                left: 50%;
+                transform: translate(-50%);
+
+                .box {
+                    width: 552px;
+                    height: 300px;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+
+                    .item {
+                        width: 46.4px;
+                        height: 100%;
+                        position: absolute;
+                        transform-style: preserve-3d;
+                    }
+
+                    .item div:first-child {
+                        width: 100%;
+                        height: 100%;
+                        background: url(../index_images/1.jpg) no-repeat;
+                        background-size: cover;
+                        position: absolute;
+                        transform: translateZ(150px);
+                    }
+
+                    .item div:nth-child(2) {
+                        width: 100%;
+                        height: 100%;
+                        background: url(../index_images/2.jpg) no-repeat;
+                        background-size: cover;
+                        position: absolute;
+                        transform: rotateX(90deg) translateZ(150px);
+                    }
+
+                    .item div:nth-child(3) {
+                        width: 100%;
+                        height: 100%;
+                        background: url(../index_images/3.jpg) no-repeat;
+                        background-size: cover;
+                        position: absolute;
+                        transform: rotateX(180deg) translateZ(150px);
+                    }
+
+                    .item div:nth-child(4) {
+                        width: 100%;
+                        height: 100%;
+                        background: url(../index_images/4.jpg) no-repeat;
+                        background-size: cover;
+                        position: absolute;
+                        transform: rotateX(-90deg) translateZ(150px);
+                    }
+
+
+
+                }
+
+
+
+            }
+
+            .a {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+                display: block;
+                width: 30px;
+                height: 50px;
+                background: rgba(0, 0, 0, .5);
+                text-align: center;
+                line-height: 50px;
+                color: #fff;
+            }
+
+            #a2 {
+                position: absolute;
+                left: 522px;
+                top: 50%;
+                transform: translate(0, -50%);
+
+            }
+
+
+        }
+    }
+}
+
+//阶梯导航
+.ladder_nav {
+    width: 40px;
+    height: 269px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%);
+    display: none;
+
+    ul {
+        height: 270px;
+
+        li {
+            width: 100%;
+            height: 40px;
+            background: #e2d8d8f8;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 13px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .current {
+            background: #31c27c;
+            color: #fff;
+        }
+    }
+
+    #dingBu {
+        display: block;
+        width: 100%;
+        height: 40px;
+        background: pink;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-radius: 6px;
+        font-size: 13px;
+        text-align: center;
+        line-height: 50px;
+    }
+}
+
+
+//热歌首选部分
+.phb {
+    .phb_center {
+        height: 715px;
+
+        .phb_content {
+            ul {
+                display: none;
+            }
+
+            div {
+                margin-left: 20px;
+            }
+
+            div:first-child {
+                margin-left: 0;
+            }
+
+            .one {
+                width: 224px;
+                height: 560px;
+                background: url(../index_images/shanking_listbg.jpg) no-repeat;
+                perspective: 800px;
+                transform-style: preserve-3d;
+                transform: translateZ(-500px) rotateY(90deg) scale3d(0.5, 0.5, 0.5);
+
+            }
+
+            @keyframes hover {
+                0% {
+                    transform: translateZ(-500px) rotateY(90deg) scale3d(0.5, 0.5, 0.5);
+                }
+
+                100% {
+                    transform: translateZ(0) rotateY(-360deg) scale3d(1, 1, 1);
+                }
+            }
+
+            .two {
+                width: 224px;
+                height: 560px;
+                background: url(../index_images/shanking_listbg.jpg) no-repeat -224px 0;
+                transform-style: preserve-3d;
+                transform: translateZ(-500px) rotateY(90deg) scale3d(0.5, 0.5, 0.5);
+                position: relative;
+
+
+            }
+
+            .ding {
+                position: relative;
+                height: 50px;
+            }
+
+            i {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background: #999;
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 50px;
+                position: absolute;
+                top: 5px;
+                left: 45%;
+                transform: translate(-50%, 0);
+                opacity: 0;
+            }
+
+            .three {
+                width: 224px;
+                height: 560px;
+                background: url(../index_images/shanking_listbg.jpg) no-repeat -448px 0;
+                perspective: 800px;
+                transform-style: preserve-3d;
+                transform: translateZ(-500px) rotateY(90deg) scale3d(0.5, 0.5, 0.5);
+            }
+
+            .four {
+                width: 224px;
+                height: 560px;
+                background: url(../index_images/shanking_listbg.jpg) no-repeat -672px 0;
+                perspective: 800px;
+                transform-style: preserve-3d;
+                transform: translateZ(-500px) rotateY(90deg) scale3d(0.5, 0.5, 0.5);
+            }
+
+            .five {
+                width: 224px;
+                height: 560px;
+                background: url(../index_images/shanking_listbg.jpg) no-repeat -896px 0;
+                perspective: 800px;
+                transform-style: preserve-3d;
+                transform: translateZ(-500px) rotateY(90deg) scale3d(0.5, 0.5, 0.5);
+            }
+
+            h3 {
+                color: #fff;
+                text-align: center;
+                font-weight: 400;
+                margin-top: 40px;
+
+                a {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #fff;
+                }
+            }
+
+            #i {
+                display: block;
+                width: 40px;
+                height: 2px;
+                background: #fff;
+                margin: 30px auto;
+                position: absolute;
+                top: 5px;
+                left: 45%;
+                transform: translate(-50%, 0);
+            }
+
+            ul li p {
+                margin: 15px 30px;
+                color: #fff;
+            }
+
+        }
+
+    }
+}
+
+//MV部分
+.mv {
+    .mv_center {
+        height: 650px;
+
+        .mv_content {
+            width: 100%;
+            height: 457px;
+            position:relative;
+            .qiu {
+                width:20px;
+                height:20px;
+                background:green;
+                border-radius:50%;
+                position: absolute;
+                top:177px;
+                left:0;
+                z-index:5;
+                display: none;
+            }
+            .qiu2 {
+                left:239px;
+            }
+            .qiu3 {
+                left:478px;
+            }
+            .qiu4 {
+                left:717px;
+            }
+            .qiu5 {
+                left:956px;
+            }
+            .qiu6 {
+                top:403px;
+                left:0;
+            }
+            .qiu7 {
+                top:403px;
+                left:239px;
+            }
+            .qiu8 {
+                top:403px;
+                left:478px;
+            }
+            .qiu9 {
+                top:403px;
+                left:717px;
+            }
+            .qiu10 {
+                top:403px;
+                left:956px;
+            }
+
+
+            ul {
+                height: 100%;
+
+                li {
+                    width: 220px;
+                    height: 225px;
+                    margin-right: 20px;
+                    // position: relative;
+                    #hiddle {
+                        width:224px;
+                        height:90px;
+                        background:rgba(255,255,255,.5);
+                        position: absolute;
+                        top:130px;
+                        left:0;
+                      
+                        .footer_left {
+                            width:80px;
+                            height:40px;
+                            background:green;
+                        }
+                        .footer_right {
+                            width:100px;
+                            height:40px;
+                            background:green;
+                        }
+                    }
+
+                    .img_hezi {
+                        width: 224px;
+                        height: 130px;
+                        position:relative;
+                        overflow: hidden;
+                        img {
+                            width: 224px;
+                            height: 130px;
+                            margin-bottom: 10px;
+                            vertical-align: middle;
+                        }
+                    }
+                    .img_hezi:hover #hiddle {
+                        // box-shadow:0 0 3px 3px rgba(0,0,0,.5);
+                        transition:top 1s linear;
+                    }
+                    @keyframes top {
+                        0%{
+                           top:130px;
+                        }
+                        100%{
+                           top:0px;
+                        }
+                    }
+
+                    p {
+                        font-size: 13px;
+                        line-height: 25px;
+                    }
+
+                    #p {
+                        color: #000;
+                    }
+
+                    #p:hover,
+                    p:hover {
+                        color: #31c27c;
+                    }
+
+                    .caream {
+                        display: block;
+                        width: 70px;
+                        height: 30px;
+
+                        i {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            background: url(../index_images/jltu.png) no-repeat -180px -17px;
+                            background-size: 200px 340px;
+                        }
+
+                        span {
+                            display: inline-block;
+                        }
+                    }
+
+                    a {
+                        color: #999;
+                        font-size: 13px;
+                        overflow: hidden;
+                    }
+                }
+
+                li:last-child {
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,314 @@
+@keyframes slide {
+    0% {
+        transform: translateY(10px);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(50px);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes newface {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes last {
+    99% {
+        height: 300px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 208px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.bx {
+    width: 1000px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.inner {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 2;
+    width: 1100px;
+    min-width: 1000px;
+    height: 100%;
+    margin-left: -550px;
+}
+
+.section2 h3,.section3 h3,.section4 h3 {
+    margin-top: 100px;
+    width: 100%;
+    height: 75px;
+    opacity: 0;
+}
+.section1 {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    // background: url(../img/bg_video.png) no-repeat;
+    // background-size: cover;
+
+    .nav {
+        height: 80px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .2);
+        // overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        .nav_bx {
+            height: 80px;
+            margin: 0 auto;
+            .logo {
+                margin-top: 23px;
+                float: left;
+                a {
+                    display: block;
+                    height: 35px;
+                    line-height: 35px;
+                    font-size: 20px;
+                }
+            }
+            .download {
+                float: right;
+                a {
+                    display: block;
+                    font-size: 20px;
+                    margin-top: 23px;
+                }
+                a:hover {
+                    color: grey;
+                }
+            }
+        }
+    }
+        ul {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+       ul li {
+           width: 100%;
+           height: 100%;
+           position: absolute;
+       }
+       ul li:first-child {
+        background: url(../img/bg_video.png) no-repeat;
+        background-size: cover;
+       }
+       ul li:nth-child(2) {
+           background: url(../img/QQmusic.jpg) no-repeat;
+           background-size: cover;
+       }
+       ul li:nth-child(3) {
+           background: url(../img/music.jpg) no-repeat;
+           background-size: cover;
+       }
+        span {
+            display: block;
+            position: absolute;
+            top: 26%;
+            margin-top: 25px;
+            left: 50%;
+            margin-left: -239px;
+            width: 478px;
+            height: 67px;
+            background: url(../img/video.png) no-repeat 0 -176px;
+            opacity: 0;
+            animation: slide .8s .4s linear forwards;
+        }
+
+        h3 {
+            position: absolute;
+            top: 30%;
+            margin-top: 95px;
+            width: 100%;
+            line-height: 54px;
+            color: rgba(86, 86, 86, 1);
+            font-size: 32px;
+            font-weight: 400;
+            text-align: center;
+            opacity: 0;
+            animation: slide .8s .8s linear forwards;
+        }
+       ul a {
+            position: absolute;
+            display: block;
+            top: 49%;
+            margin-top: 180px;
+            left: 50%;
+            margin-left: -150px;
+            width: 300px;
+            height: 60px;
+            background: url(../img/video.png) -152px 0;
+            opacity: 0;
+            animation: slide .8s 1.2s linear forwards;
+        }
+    }
+
+.section2 {
+    height: 670px;
+    background: url(../img/bg_new.png) 50% no-repeat;
+    position: relative;
+
+    .inner {
+        h3 {
+            background: url(../img/tit_1.png) no-repeat center top;
+            opacity: 0;
+            // animation: slide .8s 2s linear forwards;
+        }
+        .img1 {
+            left: 94px;
+            width: 562px;
+            height: 393px;
+            background: url(../img/skin_face1.png);
+            position: absolute;
+            top: 210px;
+            opacity: 0;
+            // animation: move .7s 2.8s linear forwards;
+        }
+
+        .img2 {
+            position: absolute;
+            left: 442px;
+            top: 251px;
+            width: 562px;
+            height: 393px;
+            background: url(../img/skin_face2.png);
+            opacity: 0;
+            // animation: move 1s 2.5s linear forwards;
+        }
+    }
+}
+
+.section3 {
+    position: relative;
+    height: 700px;
+    background: url(../img/bg_skin.png) 50% no-repeat;
+
+    .inner {
+        h3 {
+            opacity: 0;
+            background: url(../img/tit_2.png) no-repeat center top;
+            // animation: slide .8s 3s linear forwards;
+        }
+
+        img {
+            position: absolute;
+            top: 230px;
+            left: 50%;
+            margin-left: -327px;
+            width: 654px;
+            height: 473px;
+            opacity: 0;
+        }
+
+    }
+}
+
+.section4 {
+    height: 694px;
+    background: url(../img/bg_hq.png) 50% no-repeat;
+    position: relative;
+
+    .inner {
+
+        h3 {
+            background: url(../img/tit_3.png) no-repeat center top;
+            // animation: slide .8s 4.5s linear forwards;
+        }
+
+        img {
+            position: absolute;
+            top: 230px;
+            left: 50%;
+            margin-left: -327px;
+            width: 654px;
+            height: 473px;
+            opacity: 0;
+            // animation: newface .8s 5.3s linear forwards;
+        }
+    }
+}
+
+.section5 {
+    height: 400px;
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .inner {
+        .pic {
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            margin-left: -150px;
+            width: 321px;
+            height: 0;
+            opacity: 0;
+            background: url(../img/bg_last.png) 0 0 no-repeat;
+            // animation: last 3s linear 6.1s forwards;
+        }
+    }
+}

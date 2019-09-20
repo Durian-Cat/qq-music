@@ -1,0 +1,88 @@
+.s_c_wrap {
+    width: 100%;
+    background-color: #ecebeb;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.slide {
+    height: 500px;
+    position: relative;
+}
+
+.slide li {
+    position: absolute;
+    left: 200px;
+    top: 0;
+}
+
+.slide li img {
+    width: 100%;
+}
+
+.arrow {
+    opacity: 0;
+}
+
+.arrow .btn {
+    width: 71px;
+    height: 112px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    width: 70px;
+    font-size: 30px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -56px;
+    margin-left: -74px;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    width: 70px;
+    font-size: 30px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -56px;
+    right: 0;
+    z-index: 11;
+    margin-right: -74px;
+    /* background: url('../img/icon_sprite.png') no-repeat; */
+    /* background-position: 0px -121px; */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow .prev .s_l_btn {
+    width: 20px;
+    height: 38px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 24px;
+    background: url('../images/icon_sprite.png') no-repeat;
+    background-position: -21px -121px;
+
+}
+
+.arrow .next .s_r_btn {
+    width: 20px;
+    height: 38px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 24px;
+    background: url('../images/icon_sprite.png') no-repeat;
+    background-position: 0px -121px;
+}

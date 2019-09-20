@@ -1,0 +1,128 @@
+.ch7-grid {
+	text-align: center;
+}
+.ch7-grid li {
+	width: 160px;
+	height: 160px;
+	display: inline-block;
+	margin: 20px;
+}
+.ch7-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+	cursor: default;
+	-webkit-perspective: 900px;
+	-moz-perspective: 900px;
+	-o-perspective: 900px;
+	-ms-perspective: 900px;
+	perspective: 900px;
+}
+.ch7-info{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.ch7-info > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center center;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	-o-transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+}
+
+.ch7-info .ch7-info-front {
+	box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);
+}
+
+.ch7-info .ch7-info-back {
+	-webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	-moz-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	-o-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	-ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+	background: #31c27c;
+	opacity: 0;
+}
+
+.ch7-img-1 { 
+	background-image: url(../images/chenxuening.jpg);
+}
+
+.ch7-img-2 { 
+	background-image: url(../images/G.E.M.jpg);
+}
+
+.ch7-img-3 { 
+	background-image: url(../images/lironghao.jpg);
+}
+.ch7-img-4 { 
+	background-image: url(../images/zhoujielun.jpg);
+}
+.ch7-img-5 { 
+	background-image: url(../images/wanglihong.jpg);
+}
+.ch7-img-6 { 
+	background-image: url(../images/yinqueshiting.jpg);
+}
+.ch7-img-7 { 
+	background-image: url(../images/xuezhiqian.jpg);
+}
+.ch7-img-8 { 
+	background-image: url(../images/zhouchuanxiong.jpg);
+}
+.ch7-img-9 { 
+	background-image: url(../images/linjunjie.jpg);
+}
+.ch7-img-10 { 
+	background-image: url(../images/xusong.jpg);
+}
+.ch7-grid .ch7-item .ch7-info .ch7-info-back h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin: 0 30px;
+	padding: 45px 0 0 0;
+	height: 140px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-shadow: 
+		0 0 1px #fff, 
+		0 1px 2px rgba(0,0,0,0.3);
+}
+
+
+.ch7-item:hover .ch7-info-front {
+	-webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	-moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	-o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	-ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+	opacity: 0;
+}
+
+.ch7-item:hover .ch7-info-back {
+	-webkit-transform: rotate3d(1,0,0,0deg);
+	-moz-transform: rotate3d(1,0,0,0deg);
+	-o-transform: rotate3d(1,0,0,0deg);
+	-ms-transform: rotate3d(1,0,0,0deg);
+	transform: rotate3d(1,0,0,0deg);
+	opacity: 1;
+}

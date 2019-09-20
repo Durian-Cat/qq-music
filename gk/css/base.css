@@ -1,0 +1,105 @@
+/*css初始化*/
+/*清除标签默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+img {
+	/*清除ie6默认图片边框*/
+	border: 0;
+	/*清除图片底部默认缝隙*/
+	vertical-align: middle;
+
+}
+
+input,
+textarea {
+	border: 0;
+	/*清除默认轮廓线*/
+	outline: 0;
+}
+
+
+
+/*添加了小标签,控制行内元素方便*/
+i,
+em {
+	font-style: normal;
+}
+
+/*设置通用样式*/
+body {
+	font: 12px arial, 'microsoft yahei';
+	color: #000;
+	background-color: #fff;
+
+}
+
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	color: #666;
+}
+
+
+
+
+
+.tc {
+	text-align: center;
+}
+
+.f12 {
+	font-size: 12px;
+}
+
+.f14 {
+	font-size: 14px;
+}
+
+.f16 {
+	font-size: 16px;
+}
+
+.f18 {
+	font-size: 18px;
+}
+
+.f20 {
+	font-size: 20px;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '';
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}

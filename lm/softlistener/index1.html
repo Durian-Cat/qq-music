@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轻听下载页</title>
+    <link rel="shortcut icon" href="images/fonticon.ico" type="image/x-icon">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bass.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 头部导航 -->
+    <div class="top_nav">
+        <div class="nav_w">
+            <img src="images/logo.png" alt="">
+            <a href="javascript:;" class="pub_btn btn_share">分享</a>
+            <a href="javascript:;" class="pub_btn btn_download">下载其他客户端</a>
+        </div>
+    </div>
+
+    <!-- 第一个banner -->
+    <div class="banner" id="slide">
+        <div class="img_box" id="div1">
+            <img class="banner_one_img" src="images/focus_banner_1.jpg" alt="">
+        </div>
+        <div class="img_box" id="div2" style="display:none">
+            <img class="banner_one_img" src="images/focus_banner_2.jpg" alt="">
+        </div>
+        <div class="img_box" id="div3" style="display:none">
+            <img class="banner_one_img" src="images/focus_banner_3.jpg" alt="">
+        </div>
+        <div class="img_box" id="div4" style="display:none">
+            <img class="banner_one_img" src="images/focus_banner_2.jpg" alt="">
+        </div>
+
+        <!-- 歌词滚动 -->
+        <div class="lyrics">
+            <div class="lyrics_details">
+                <p>像我这样的人 - 毛不易</p>
+                <p>词：毛不易</p>
+                <p>曲：毛不易</p>
+                <p>像我这样优秀的人</p>
+                <p>本该灿烂过一生</p>
+                <p>怎么二十多年到头来</p>
+                <p>还在人海里浮沉</p>
+                <p>像我这样聪明的人</p>
+                <p>早就告别了单纯</p>
+                <p>怎么还是用了一段情</p>
+                <p> 去换一身伤痕</p>
+                <p> 像我这样迷茫的人</p>
+                <p> 像我这样寻找的人</p>
+                <p> 像我这样碌碌无为的人</p>
+                <p> 你还见过多少人</p>
+                <p> 像我这样庸俗的人</p>
+                <p> 从不喜欢装深沉</p>
+                <p> 怎么偶尔听到老歌时</p>
+                <p> 忽然也晃了神</p>
+                <p> 像我这样懦弱的人</p>
+                <p> 凡事都要留几分</p>
+                <p> 怎么曾经也会为了谁</p>
+                <p> 想过奋不顾身</p>
+                <p> 像我这样迷茫的人</p>
+                <p> 像我这样寻找的人</p>
+                <p> 像我这样碌碌无为的人</p>
+                <p> 你还见过多少人</p>
+                <p> 像我这样孤单的人</p>
+                <p> 像我这样傻的人</p>
+                <p> 像我这样不甘平凡的人</p>
+                <p> 世界上有多少人</p>
+                <p> 像我这样莫名其妙的人</p>
+                <p> 会不会有人心疼</p>
+            </div>
+            <div class="wait"></div>
+        </div>
+
+
+    </div>
+
+    <!-- 第二个banner -->
+    <div class="banner_1">
+        <div class="text_left" style="display: none">
+            <p class="big_text">歌词自动匹配，
+                音乐不止是听的</p>
+            <p class="small_text">智能匹配技术能为音乐自动匹配到歌词，
+                同时还奉上了歌曲详情（支持修改），让音乐更加完整</p>
+
+        </div>
+        <div id="imgs" class="img_right " style="display: none">
+            <div id="bg1" class="img_detail bg">
+                <img src="images/lyric_1.jpg" alt="">
+            </div>
+            <div id="bg2" class="img_detail bg">
+                <img src="images/lyric_2.jpg" alt="">
+            </div>
+            <div id="bg3" class="img_detail bg">
+                <img src="images/lyric_3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- 第三个banner -->
+    <div class="banner_2">
+        <div class="part2">
+            <div class="skin__list">
+                <p class="skin__item  el play" style=""><img
+                        src="images/layer_1.png"
+                        alt="精美皮肤"></p>
+                <p class="skin__item  el play" style=""><img
+                        src="images/layer_2.png"
+                        alt="精美皮肤"></p>
+                <p class="skin__item  el play" style=""><img
+                    src="images/layer_3.png"
+                        alt="精美皮肤"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 第四个banner -->
+    <div class="banner_3">
+        <div class="paraph" style="display: none">
+            <p>Material Design风格定制，颜值爆表</p>
+            <p>整体设计运用Material Design风格，配合优雅的场景转换和涟漪效果、便捷的手势操作，让你一见倾心</p>
+        </div>
+        <!-- <div class="next_img">
+            <img src="./images/list.png" alt="">
+        </div> -->
+        <div class="main_banner">
+            <div class="main_banner_wrap">
+                <div class="main_banner_box" id="m_box">
+                    <a href="javascript:void(0)" class="banner_btn js_pre">
+                        <span class="banner_btn_arrow"><i></i></span>
+                    </a>
+                    <a href="javascript:void(0)" class="banner_btn btn_next js_next">
+                        <span class="banner_btn_arrow"><i></i></span>
+                    </a>
+                    <ul>
+                        <li id="imgCard0"
+                            style="z-index: 5; width: 670px; height: 360px; left: 255px; top: 0px; opacity: 1;">
+                            <a href=""><span style="opacity: 0;"></span></a>
+                            <img src="images/3-1.jpg" alt="">
+                            <p style="bottom: 0px;">《一万个可能》原唱——克丽丝叮《竹林中》</p>
+                        </li>
+                        <li id="imgCard1"
+                            style="z-index: 1; width: 580px; height: 300px; top: 20px; left: 600px; opacity: 1;">
+                            <a href=""><span style="opacity: 0.5;"></span></a>
+                            <img src="images/3-2.jpg" alt="">
+                            <p style="bottom: -50px;">盘尼西林——“温情于浪漫的夜晚”</p>
+                        </li>
+                        <li id="imgCard2"
+                            style="z-index: 1; width: 450px; height: 240px; left: 0px; top: 60px; opacity: 0;">
+                            <a href=""><span style="opacity: 0.5;"></span></a>
+                            <img src="images/3-3.jpg" alt="">
+                            <p style="bottom: -50px;">乐见大牌：”荣“耀之声，”维“我独尊</p>
+                        </li>
+                        <li id="imgCard3"
+                            style="z-index: 1; width: 450px; height: 240px; left: 0px; top: 60px; opacity: 0;">
+                            <a href=""><span style="opacity: 0.5;"></span></a>
+                            <img src="images/3-4.jpg" alt="">
+                            <p style="bottom: -50px;">超人气梦幻流行乐队——Heavenly</p>
+                        </li>
+                        <li id="imgCard4"
+                            style="z-index: 2; width: 580px; height: 300px; top: 20px; left: 0px; opacity: 1;">
+                            <a href=""><span style="opacity: 0.5;"></span></a>
+                            <img src="images/3-5.jpg" alt="">
+                            <p style="bottom: -50px;">毕雯珺——《拳心拳意》</p>
+                        </li>
+                    </ul>
+                 
+                </div>
+             
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 第五个banner -->
+    <div class="banner_1" id="sp">
+        <div id="imgs1" class="img_right " style="display: none">
+            <div id="bg1" class="img_detail bg">
+                <img src="images/lyric_3.jpg" alt="">
+            </div>
+            <div id="bg2" class="img_detail bg">
+                <img src="images/lyric_2.jpg" alt="">
+            </div>
+            <div id="bg3" class="img_detail bg">
+                <img src="images/lyric_1.jpg" alt="">
+            </div>
+        </div>
+        <div class="text_left" style="display: none">
+            <p class="big_text">歌词自动匹配，
+                音乐不止是听的</p>
+            <p class="small_text">智能匹配技术能为音乐自动匹配到歌词，
+                同时还奉上了歌曲详情（支持修改），让音乐更加完整</p>
+
+        </div>
+    </div>
+
+    <!-- 第六个banner -->
+    <div class="banner_1" id="six">
+        <div class="text_left" style="display: none">
+            <p class="big_text">高速扫描精准匹配</p>
+            <p class="small_text">轻听能够快速便捷的get到所有本地音乐，并智能筛选去重，无需动手即可找齐所有音乐，为你打造完备的本地音乐库。</p>
+
+        </div>
+        <div id="imgs2" class="img_right " style="display: none">
+            <div id="bg1" class="img_detail bg">
+                <img src="images/lyric_1.jpg" alt="">
+            </div>
+            <div id="bg2" class="img_detail bg">
+                <img src="images/lyric_3.jpg" alt="">
+            </div>
+            <div id="bg3" class="img_detail bg">
+                <img src="images/lyric_2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- 第七个banner -->
+    <div class="banner_7">
+        <div class="content">
+            <div class="public" id="pub1">
+                <img id="big" src="./images/seven_big.png" alt="">
+                <img id="im_one" src="./images/mo1.jpg" alt="">
+                <img id="small" src="./images/seven_small.png" alt="">
+                <span>
+                    QUEEN REAL TRIBUTE皇后乐队演唱会《波西米亚狂想曲》
+                </span>
+            </div>
+            <div class="public" id="pub2">
+
+                <img id="big" src="./images/seven_big.png" alt="">
+                <img id="im_one" src="./images/mo2.jpg" alt="">
+                <img id="small" src="./images/seven_small.png" alt="">
+                <span>
+                    [ 乐海方舟 ] 呈现：ATM*玩家 2019 巡演
+                </span>
+
+            </div>
+            <div class="public" id="pub3">
+                <img id="big" src="./images/seven_big.png" alt="">
+                <img id="im_one" src="./images/mo3.jpg" alt="">
+                <img id="small" src="./images/seven_small.png" alt="">
+                <span>
+                    直火帮2019“第二个酒吧”巡演
+                </span>
+
+            </div>
+            <div class="public" id="pub4">
+                <img id="big" src="./images/seven_big.png" alt="">
+                <div class="ct">
+                    <img id="im_one" src="./images/mo4.jpg" alt="">
+                    <span>
+                        【聚橙】《“Portraits” Greyson Chance 演唱会》
+                    </span>
+                </div>
+
+                <img id="small" src="./images/seven_small.png" alt="">
+
+
+            </div>
+        </div>
+
+        <div class="text_left" style="display: none">
+            <p class="big_text">Super Sound音效，震撼你的耳朵</p>
+            <p class="small_text">全景环绕、超重低音、清澈人声、现场律动等多种音效体验，</p>
+            <p class="small_text">还能支持均衡器调节功能，满足你挑剔的耳朵</p>
+        </div>
+        <a href="javascript:;" class="more">了解更多</a>
+    </div>
+
+    <!-- 第八个banner -->
+    <div class="banner_8">
+        <h1>更多惊喜，等你来体验</h1>
+        <a href="javascript:;" class="down">立即下载</a>
+    </div>
+
+    <!-- 结尾版权 -->
+    <div class="soft_footer" id="frame_bottom">
+        <p class="footer_about">
+            <a href="javascript:;">关于腾讯</a>|
+            <a href="javascript:;">About Tencent</a>|
+            <a href="javascript:;">服务条款</a>|
+            <a href="javascript:;">广告服务</a>|
+            <a href="javascript:;">腾讯招聘</a>|
+            <a href="javascript:;">客服中心</a>|
+            <a href="javascript:;">网站导航</a>
+        </p>
+        <p class="footer_copyright">
+            Copyright © 1998 -
+            <span id="copyendyear"></span>
+            Tencent.
+            <a href="javascript:;">
+                All Rights Reserved</a>.
+        </p>
+        <p class="footer_company">
+            腾讯公司
+            <a href="javascript:;">版权所有</a>
+            <a href="javascript:;">腾讯网络文化经营许可证</a>
+        </p>
+    </div>
+
+    <script src="js/index.js"> </script>
+    <!-- <script src="js/animate.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+.all_btn {
+    height: 60px;
+    margin-right: 17px;
+    overflow: hidden;
+}
+.all_btn h1 {
+    color: #000;
+    font-size: 24px;
+    line-height: 58px;
+    font-weight: 400;
+    float: left;
+}
+.all_btn .qiehuan ul {
+    float: right;
+}
+.all_btn .qiehuan li{
+    width: 32px;
+    height: 38px;
+    line-height: 38px;
+    float: left;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 0 16px;
+}
+.current {
+    border-color: #31c27c;
+    background-color: #31c27c;
+    color: #fff;
+    
+}
+.h_nav{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+.h_nav ul {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    margin-left: 215px;
+    
+}
+.h_nav li {
+    flex: 1;
+}           
+.h_nav a{
+    color: #000;
+    font-size: 16px;
+}
+.h_nav a:hover{
+    color: #31c27c;
+}
+.h_nav .num {
+     color: #31c27c;
+}
+.list {
+    overflow: hidden;
+    /* width: 100%; */
+}
+/* .w{
+    width: 1200px;
+} */
+ul {
+    display: block;
+    /* list-style-type: disc;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+}
+
+.playlist__list  li{
+    flex: 1;
+	float: left;
+    padding-right: 16px;
+    position: relative;
+}
+
+.playlist__list .one{
+    width: 224px;
+    height: 234px;
+    overflow: hidden;
+    
+}
+.playlist__list img{
+	width: 224px;
+	/* height: 225px; */
+    padding-bottom: 10px;
+    transition:  all 1s linear;
+}
+.playlist__list img:hover{
+    transform: scale(1.3);
+}
+.playlist__list em{
+    display: none;
+    width: 70px;
+    height: 70px; 
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    background: url(../images/bf.png);
+}
+/* .playlist__list em:hover{
+    display: block;
+    width: 70px;
+    height: 70px;
+   
+    /* transform: scale(1.1); */
+ /* } */ 
+.playlist__list h4{
+    padding-bottom: 5px;
+    color: #000;
+}
+.playlist__list h4:hover{
+    color: #31c27c;
+}
+.playlist__list p{
+    padding-bottom: 5px;
+    color: #99a6c4;
+}
+.playlist__list p:hover{
+    color: #31c27c;
+}
+.playlist__list i {
+    display: inline-block;
+    padding-bottom: 40px;
+    color: #99a6c4;
+}
+
+
+.list .item:nth-child(2){
+    display: none;
+}
+.chaxai {
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+.chaxai p {
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+}
+.chaxai a {
+    display: block;
+    margin: 20px auto 0;
+    width: 175px;
+    height: 41px;
+    line-height: 41px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border-radius: 41px;
+    background-color: #31c27c; 
+}
+.chaxai a:hover {
+  background-color: #0e9755;  
+}
+
+.head_tag {
+    position: relative;
+    padding: 20px 0 32px 0;
+    margin-right: -24px;
+    /* width: 100%; */
+    display: flex;
+}
+.head_tag .big{
+    position: relative;
+    flex: 1;
+    /* float: left; */
+    /* width: 238px; */
+    line-height: 26px;
+    /* margin-right: 22px; */
+    overflow: hidden;
+}
+.head_tag .big:nth-child(2){
+    margin-left: 10px;
+}
+.head_tag .big:nth-child(3){
+    margin-left: 10px;
+}
+.head_tag .big:nth-child(4){
+    margin-left: 10px;
+}
+.head_tag .big:nth-child(5){
+    margin-left: 10px;
+}
+.big h3 {
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 2px;
+    margin-bottom: 8px;
+    margin-top: -6px;
+    color: #999;
+}
+.head_tag>.big{
+    flex: 1;
+}
+.big i{
+    position: absolute;
+    top: 39px;
+    right: 0;
+    width: 1px;
+    height: 78px;
+    background-color: #eeeef0;
+}
+.big li{
+   float: left;
+   width: 76px;
+   margin-bottom: 4px;
+   color: #000;
+   cursor: pointer;
+
+}
+.big li a{
+    color: #000;
+}
+.green{
+    color: #31c27c;
+}
+.big li a:hover {
+    color: #31c27c;
+}

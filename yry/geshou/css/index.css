@@ -1,0 +1,240 @@
+.h_nav{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+
+}
+.h_nav .w ul{
+    width: 800px;
+    height: 100%;
+    display: flex;
+        
+    margin-left: 215px;
+
+}
+
+.h_nav .w ul li {
+    flex: 1;
+
+}
+.h_nav .w ul li a {
+    color: #000;
+    font-size: 16px;
+
+}
+.h_nav .w ul li a:hover {
+    color: #31c27c;
+
+}
+.h_nav .w ul li .num {
+    color: #31c27c;
+
+}
+
+
+
+
+.jq22-container{
+    position: relative;
+}
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+.zhong {
+    margin: 0 50px;
+    position: relative;;
+}
+.zhong_tit {
+    margin-left: auto;
+    margin-right: auto;
+    width: 494px;
+    font-size: 54px;
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 103px;
+    background-position: 0 0;
+}
+.zhong_deng {
+    font-size: 25px;
+    color: #fff;
+    width: 260px;
+    height: 26px;
+    margin-top: 20px;
+    background-position: 0 -70px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.btn {
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    line-height: 48px;
+    width: 174px;
+    border:1px solid #ccc;
+}
+.btn:hover{
+    border: 1px solid #fff;
+}
+
+.btn_border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    
+    border: 1px solid #fff;
+    opacity: .2;
+    transition-property: opacity;
+    transition-duration: .3s;
+}
+.main {
+    margin: 50px 50px 120px 50px;
+}
+.singer {
+    overflow: hidden;
+    text-align: center;
+}
+
+.singertwo {
+    overflow: hidden;
+    text-align: center;
+}
+.singer ul {
+    margin-bottom: 4px;
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: -24px;
+}
+.singertwo ul {
+    margin-bottom: 4px;
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: -24px;
+}
+.singer li {
+    float: left;
+    width: 20%;
+    display: block;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.singertwo li {
+    float: left;
+    width: 20%;
+    display: block;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.singer li img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 16px auto;
+    border-radius: 126px;
+    transition:all 1s linear;
+
+}
+.singertwo li img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 16px auto;
+    border-radius: 126px;
+    /* opacity:0.8; */
+    transition:all 1s linear;
+}
+.singer li img:hover {
+    transform:scale(1.2);
+
+}
+.singertwo li img:hover {
+    transform:rotateY(360deg);
+
+}
+
+.singer li h3  {
+   font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    color: #000;
+    zoom: 1;
+    margin: 20px 30px 4px; 
+}
+.singertwo li h3  {
+    font-size: 16px;
+     font-weight: 400;
+     overflow: hidden;
+     color: #000;
+     zoom: 1;
+     margin: 20px 30px 4px; 
+ }
+.singer_ulname {
+    overflow: hidden;
+    margin-top: 60px;
+
+}
+.singertwo_ulname {
+    overflow: hidden;
+    margin-top: 60px;
+
+}
+.singer_ulname .singer_name {
+    float: left;
+    width: 20%;
+    height: 36px;
+    padding-left: 30px;
+}
+.singertwo_ulname .singer_name {
+    float: left;
+    width: 20%;
+    height: 36px;
+    padding-left: 30px;
+}
+.singer_ulname .singer_name a {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    height: 21px;
+    line-height: 21px;
+}
+.singertwo_ulname .singer_name a {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    height: 21px;
+    line-height: 21px;
+}
+.singer_ulname .singer_name a:hover {
+    color: #31c27c;
+}
+.singertwo_ulname .singer_name a:hover {
+    color: #31c27c;
+}
+.qiehuan ul {
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
+}
+.qiehuan li{
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    cursor: pointer;
+}
+.current {
+    background-color: #31c27c;
+    color: #fff;
+}
+.list .item:nth-child(2){
+    display: none;
+}
